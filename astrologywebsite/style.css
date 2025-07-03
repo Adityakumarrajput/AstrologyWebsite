@@ -1,0 +1,168 @@
+/* style.css */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #c3dafe, #e9d5ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s;
+}
+
+body {
+  background: url("astrologyimage1.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+  position: relative;
+}
+
+.form-card {
+  background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-card:hover {
+  transform: scale(1.01);
+}
+
+h2 {
+  color: #4c51bf;
+  margin-bottom: 20px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.date-inputs input {
+  flex: 1;
+}
+
+button {
+  background-color: #5a67d8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #434190;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.result-box {
+  margin-top: 20px;
+}
+
+.result-box p {
+  background: #f7f5ff;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #4c51bf;
+  font-size: 16px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#loading {
+  display: none;
+  margin-top: 15px;
+  font-style: italic;
+  color: #999;
+}
+
+/* Star Animation Background */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('./starimage.avif') repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
+
+/* Dark Mode Toggle */
+.toggle-theme {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: #ffd700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+body.dark {
+  background: #1a1a2e !important;
+  color: #eee;
+}
+
+body.dark .form-card {
+  background: #2e2e4d;
+  color: #fff;
+}
+
+body.dark input, body.dark button {
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #666;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+  font-size: 14px;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

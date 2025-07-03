@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Astrology Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated Stars -->
+  <div class="stars"></div>
+
+  <!-- Main Form Content -->
+  <main class="container">
+    <section class="form-card">
+      <h2>Astrology Birth Form</h2>
+      <form id="astroForm" novalidate>
+        <div class="form-group">
+          <label for="name">First Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your first name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" name="surname" placeholder="Enter your surname" required />
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <div class="date-inputs">
+            <input type="number" id="day" name="day" placeholder="Day" min="1" max="31" required />
+            <input type="number" id="month" name="month" placeholder="Month" min="1" max="12" required />
+            <input type="number" id="year" name="year" placeholder="Year" min="1900" max="2099" required />
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div id="loading">Reading the stars...</div>
+      <div id="result" class="result-box" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+
+  <footer>
+    © 2025 AstroSite by Suraj pandit
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
